@@ -38,18 +38,6 @@ int Length(struct Node **head){
   return i;
 }
 
-// int BInt(struct Node* head){
-//     int sum = 0,d,i;
-//     struct Node * ptr = head;
-//     i=Length(&ptr);
-//     for(int j=0;j<i;j++){
-//         d=ptr->data;
-//         sum+=(pow(2,i))*d;
-//         ptr=ptr->next;
-//     }
-//     return sum;
-// }
-
 int BInt(struct Node* head){
     int sum = 0,d,i;
     struct Node * ptr = head;
@@ -69,7 +57,6 @@ int main(){
     printf("Enter Binary Number: ");
     scanf("%s",B);
     n=strlen(B);
-    //printf("%d  ",n);
     for(int i=0;i<n;i++){
         k=B[i]-48;
         if(i==0){
@@ -78,7 +65,6 @@ int main(){
         }
         InAtEnd(head,k);
     }
-    //Display(head);
     printf("Integer: %d",BInt(head));
     return 0;
 }
