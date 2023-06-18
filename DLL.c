@@ -7,20 +7,15 @@ struct Node{
   int data;
 };
 
-void DisplayRight(struct Node** head){
+void Display(struct Node** head){
   struct Node* ptr = *head;
   printf("Right Transversal: ");
-  while(ptr != NULL){
+  while(ptr->right != NULL){
       printf("%d ",ptr->data);
       ptr=ptr->right;
   }
+  printf("%d",ptr->data);
   printf("\n");
-}
-
-void DisplayLeft(struct Node** head){
-  struct Node* ptr = *head;
-  while(ptr->right!= NULL)
-    ptr=ptr->right;
   printf("Left Transversal: ");
   while(ptr != NULL){
       printf("%d ",ptr->data);
@@ -105,17 +100,17 @@ int main(void) {
   head = InsertFirst(head,3);
   head = InsertFirst(head,4);
   head = InsertFirst(head,5);
-  DisplayRight(&head);
+  //DisplayRight(&head);
   //InsertAtPos(head,3,9);
   //DisplayRight(&head);
-  DeleteEnd(head);
+  //DeleteEnd(head);
 
-  InsertEnd(head,10);
+  //InsertEnd(head,10);
   //DisplayRight(&head);
   //DeleteAtPos(head,4);
 
   //head = DeleteFirst(head);
 
-  DisplayRight(&head);
+  Display(&head);
   return 0;
 }
