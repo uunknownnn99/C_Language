@@ -34,6 +34,7 @@ void push(struct Node* head,int data){
     struct Node* ptr = head;
     while(ptr->right!=NULL)
         ptr=ptr->right;
+
     ptr->right = new;
     new->left = ptr;
     new->right = NULL;
